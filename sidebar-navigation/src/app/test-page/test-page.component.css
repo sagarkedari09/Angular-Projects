@@ -1,0 +1,63 @@
+.page-container {
+  height: 100%;
+  background: rgb(35, 42, 58);
+  display: flex;
+}
+.page-content-container {
+  padding: 3em;
+}
+.sidebar {
+  height: 100%;
+  width: 20em;
+  background: rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.list-items {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.list-item {
+  display: flex;
+  gap: 0.1em;
+  align-items: center;
+  font-size: 1.25em;
+  color: rgb(229, 226, 226);
+  padding: 0.5em 2.25em;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+.list-item:hover {
+  color: white;
+}
+.list-item::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  left: 0;
+  top: 0;
+  background-color: orange;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.list-item:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.list-item i.material-icons {
+  margin-right: 0.5em;
+  font-size: 1.25em;
+}
+.page-content-container p{
+          color: aliceblue;
+}

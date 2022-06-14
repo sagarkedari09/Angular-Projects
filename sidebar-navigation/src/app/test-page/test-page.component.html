@@ -1,0 +1,54 @@
+<!-- <div class="page-container">
+  <div class="sidebar">
+    <div class="list-items">
+      <a routerLink="/page-1" class="list-item">
+        <i class="material-icons">bookmark_border</i>
+        This is a test item
+      </a>
+      <a routerLink="/page-2" class="list-item">
+        <i class="material-icons">bookmark_border</i>
+        This is a test item
+      </a>
+      <a routerLink="/page-3"class="list-item">
+        <i class="material-icons">bookmark_border</i>
+        This is a test item
+      </a>
+    </div>
+  </div>
+  <div class="page-content-container">
+          <router-outlet></router-outlet>
+  </div>
+
+</div> -->
+<div class="page-container">
+  <div class="sidebar">
+    <div class="list-items">
+      <div class="list-item" (click)="display(1)">
+          <i class="material-icons">bookmark_border</i>
+          This is a test item 1
+      </div>
+      <div class="list-item" (click)="display(2)">
+          <i class="material-icons">bookmark_border</i>
+          This is a test item 2
+      </div>
+      <div class="list-item" (click)="display(3)">
+          <i class="material-icons">bookmark_border</i>
+          This is a test item 3
+      </div>
+    </div>
+  </div>
+  <div class="page-content-container" [ngSwitch]="num">
+    <div *ngSwitchCase="1">
+          <h2>Content One</h2>
+          <p>This will include the content from item 1.</p>
+    </div>
+    <div *ngSwitchCase="2">
+          <h2>Content Two</h2>
+          <p>This will include the content from item 2.</p>
+    </div>
+    <div *ngSwitchCase="3">
+          <h2>Content Three</h2>
+          <p>This will include the content from item 3.</p>
+    </div>
+  </div>
+</div>
