@@ -1,0 +1,55 @@
+@import '../../main-styles.scss';
+
+.budget-items-section
+{
+    display:flex;
+    padding:2rem;
+
+
+    justify-content:center;
+    align-items:center;
+    .budget-items-container{
+        display:flex;
+        padding:1.5rem;
+        height:100%;
+        width:100%;
+        justify-content:space-evenly;
+
+        .income-column, .expenses-column{
+            display:flex;
+            flex-direction: column;
+            flex-basis:0;
+           
+
+            h3{
+                
+                font-family:'Lato';
+                font-weight:900;
+                font-size:1.5rem;
+                text-transform:uppercase;
+            }
+        }
+
+        .income-column{
+            padding:1rem;
+            flex:1;
+            h3{
+                color: $green;
+            }
+        }
+        .expenses-column{
+            padding:1rem;
+            flex:1;
+            h3{
+                color: $red;
+            }
+        }
+
+        .budget-items{
+            display:flex;
+            flex-direction:column;
+            margin-top:1.5rem;
+            
+        }
+    }
+}

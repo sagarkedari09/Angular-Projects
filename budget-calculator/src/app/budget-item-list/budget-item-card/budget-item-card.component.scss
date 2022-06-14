@@ -1,0 +1,79 @@
+@import '../../../main-styles.scss';
+
+.root{
+    display:flex;
+    width:100%;
+    position:relative;
+
+    
+    .x-icon-button{
+        position:absolute;
+        background-color:$light-red;
+        height:2rem;
+        background-image:url('../../../../assets/x.svg');
+        background-repeat: no-repeat;
+        background-position:center;
+        border:thin solid 1px;
+        border-radius:50%;
+        width:2rem;
+        right:0;
+        opacity: 0;
+        cursor: pointer;
+        transition:opacity 0.2s ease-out,transform 0.2s ease-in;
+        transform: scale(0);
+    }
+
+    &:hover{
+        .x-icon-button{
+            opacity: 1;
+        transform:scale(1) translateY(-50%) ;
+        }
+        
+    }
+}
+
+.budget-item{
+    display:flex;
+    width:100%;
+    background-color: $light-grey;
+    border-radius:4px;
+    padding:0.5rem;
+    cursor:pointer;
+    transition: background-color 0.2s ease-out;
+    &:hover{
+        background-color: darken($light-grey,2%);
+    }
+
+    .description{
+        display:flex;
+        align-items:center;
+        flex-grow:1;
+        font-size:1rem;
+        margin-left:0.25rem;
+    }
+
+    .amount{
+        padding:0.25rem;
+        border-radius:4px;
+    }
+
+    
+}
+
+.expenses{
+    p{
+        color:$red;
+    }
+    .amount{
+        background-color:$light-red;
+    }
+}
+
+.income{
+    p{
+        color:$green;
+    }
+    .amount{
+        background-color:$light-green;
+    }
+}
